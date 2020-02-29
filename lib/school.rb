@@ -12,7 +12,13 @@ class School
     roster[level] ||= []
     roster[level] << student
   end
-    
+  def grade(level)
+    roster.detect do |x, y| 
+      if x == level
+        return y 
+      end 
+    end 
+  end  
   def sort 
      nu_hash = {}
     roster.each do |x, y| 
@@ -20,13 +26,7 @@ class School
     end 
     nu_hash
   end 
-  def grade(level)
-    roster.detect do |x, y| 
-      if x == level
-        return y 
-      end 
-    end 
-  end
+  
   
 end 
   
