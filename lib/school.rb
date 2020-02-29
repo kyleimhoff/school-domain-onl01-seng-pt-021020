@@ -5,10 +5,6 @@ class School
     @roster = {}
   end
 
-  def roster
-    @roster = {}
-  end
-
   def add_student(student, level)
     @roster[level] ||= []
     @roster[level] << student
